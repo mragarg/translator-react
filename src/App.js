@@ -10,7 +10,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      inputText: ''
+      inputText: '',
+      names: ['oakley', 'milla', 'angela']
     };
 
   }
@@ -20,27 +21,31 @@ class App extends React.Component {
     console.log('Rendering App');
     console.log(`Top of App.render, State is now ${this.state.inputText}`);
 
-    const names = ['oakley', 'milla', 'angela'];
 
     return (
       <div className="App">
         <header className="App-header">
 
-          <ul>
+          {/* <ul>
             {
-              names.map(name => {
+              this.state.names.map(name => {
                 return <li>{name}</li>
               })
             }
-          </ul>
+          </ul> */}
   
-          {/* <input 
+          <input 
             onChange={this._updateInputText}
-          /> */}
+          />
   
-          {/* <Output 
+          <Output 
           text={this.state.inputText}
-          /> */}
+          />
+
+          <Output 
+          text={this.state.inputText}
+          transform="l33t"
+          />
   
         </header>
       </div>
