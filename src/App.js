@@ -10,12 +10,16 @@ function App() {
       <header className="App-header">
 
         <input 
-          onChange={}
+          onChange={ (e) => {
+            console.log("You typed something");
+            console.log(e.target.value);
+          } }
         />
-        
+
         <Output 
         text="does it work?"
         />
+        
       </header>
     </div>
   );
